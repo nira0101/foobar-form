@@ -1,0 +1,98 @@
+@use "../base/color";
+
+.form-screen {
+  position: relative;
+  align-self: center;
+  padding: 2vw 0;
+  background-color: #3f3f50;
+
+  border: 1px solid color.$head-color;
+  border-radius: 10px;
+  position: absolute;
+  top: 15%;
+  left: 26%;
+  height: min-content;
+  width: max-content;
+  margin: auto;
+}
+
+#modal-one,
+#payment,
+#confirm {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+#done {
+  background-color: lightgreen;
+  color: white;
+  border: 1px solid lightgreen;
+}
+
+#progress-bar {
+  display: flex;
+  margin: 0 3vw;
+  align-content: center;
+  align-items: center;
+
+  h2 {
+    border: 1px solid color.$head-color;
+    display: block;
+    padding: 0.5vw;
+    border-radius: 50%;
+    height: clamp(42px, 1vw, 1vw);
+    width: clamp(42px, 1vw, 1vw);
+    line-height: clamp(42px, 1vw, 1vw);
+    text-align: center;
+  }
+
+  .fill {
+    color: white;
+    background-color: black;
+  }
+}
+
+.line {
+  width: 5vw;
+  height: 1px;
+  background-color: white;
+}
+
+input[type="button"]:not(.close) {
+  background: pink;
+  border: 1px solid pink;
+  margin: 1vw 0;
+  border-radius: 5vw;
+  color: white;
+  transition: 0.25s;
+  margin: 0.5vw 0;
+  padding: 15px 60px;
+}
+
+#previous:hover {
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: -2vw;
+  right: -1vw;
+  border: 1px solid red;
+  border-radius: 5vw;
+  width: clamp(50px, 2vw, 2vw);
+  height: clamp(50px, 2vw, 2vw);
+}
+
+.close:hover {
+  background-color: purple;
+  cursor: pointer;
+  color: white;
+}
+
+input[type="button"]:not(.close):hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: gray;
+}

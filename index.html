@@ -25,9 +25,48 @@
            <h1 class="name"><span>Name:</span></h1>
            <h1 class="cate"><span>Category:</span></h1>
            <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
-             <button>deleteme</button>
+    <button>order</button>
         </article>
     </template>
+
+    <section id="selected-beer" class="hidden">
+      <article class="form-screen" id="modal-one">
+        <input id="close-1" type="button" class="close" value="✕" />
+        <div id="progress-bar">
+          <h2 class="fill">1</h2>
+          <div class="line"></div>
+          <h2>2</h2>
+          <div class="line"></div>
+          <h2>✔</h2>
+        </div>  
+          <h1>modal-one</h1>
+        <input id="next" type="button" class="next hidden" value="Next"/>
+      </article>
+      <article class="form-screen hidden" id="payment">
+        <input id="close-2" type="button" class="close" value="✕" />
+        <button id="back" class="back"><a>Back</a></button>
+        <div id="progress-bar">
+          <h2 id="previous">1</h2>
+          <div class="line"></div>
+          <h2 class="fill">2</h2>
+          <div class="line"></div>
+          <h2>✔</h2>
+        </div>
+        <h1>payment</h1>
+      </article>
+      <article class="form-screen hidden" id="confirm">
+        <input id="close-3" type="button" class="close" value="✕" />
+        <div id="progress-bar">
+          <h2>1</h2>
+          <div class="line"></div>
+          <h2>2</h2>
+          <div class="line"></div>
+          <h2 id="done">✔</h2>
+        </div>
+          <h1>confirm</h1>
+        <input type="submit" id="submit" value="Submit" class="hidden"/>
+      </article>
+    </section>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

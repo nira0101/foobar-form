@@ -1,0 +1,44 @@
+@use "../base/color";
+button {
+  width: 150px;
+  height: 50px;
+  background: color.$head-color;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid color.$head-color;
+  border-radius: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  &::after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    background-color: lightblue;
+    position: absolute;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: white;
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.blurred {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
