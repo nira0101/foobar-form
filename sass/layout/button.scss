@@ -1,7 +1,8 @@
 @use "../base/color";
 button {
+  margin: 20px;
   width: 150px;
-  height: 50px;
+  height: 30px;
   background: color.$head-color;
   color: white;
   text-transform: uppercase;

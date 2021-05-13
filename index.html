@@ -13,11 +13,20 @@
         <h1>FOOBAR</h1>
       </header>
       <main>
+        <h2>Please select the beer you like</h2>
       </main>
-
+      
       <template>
+        
         <div class="b-img">
           <img src="" alt="" class="beer-img">
+          <!-- this style is temporal -->
+          <style>
+            .beer-img{
+              width: 100px;
+              height: auto;
+            }
+          </style>
         </div>
      
         <article class="beer-desc">
@@ -25,10 +34,58 @@
            <h1 class="name"><span>Name:</span></h1>
            <h1 class="cate"><span>Category:</span></h1>
            <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
-    <button>order</button>
+           <input type="number" id="quantity" name="quantity" min="1" max="10"
+            required>
+           <input type="checkbox" />
+           <div class="btn_container">
+            <button class="next">Order ></button>
+          </div>
+    <!-- <button>order</button> -->
         </article>
     </template>
+<!-- this a new form section Jesus added instead of the popup -->
+<fieldset id="show_order">
+  <legend class="fieldset_heading">Your Order</legend>
+  <div class="flex_top">
+    <h2>Please confirm your order</h2>
+    <div class="checkbox_container"></div>
+  </div>
+  <div class="btn_container">
+    <button class="back">cancel</button>
+    <button class="next"> Order</button>
+  </div>
+</fieldset>
+<fieldset id="pay_order">
+  <legend class="payment_info">Payment info</legend>
+  <h2>Payment information</h2>
+  <label> Name
+  <input type="text" name="fname" required placeholder="Your Name">
+</label>
+<label >
+  Card number
+  <input name="credit-number" class="cc-number" type="tel" pattern="[0-9]-[0-9][0-9]-[0-9]" maxlength="16" placeholder="Card Number">
+</label> Expires End
+<label>
+<input name="credit-expires" class="cc-expires" type="tel" pattern="\d*" maxlength="7" placeholder="MM / YY">
+</label>
+<label>
+  CVC
+<input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="3" placeholder="CVC">
+</label>
+<button class="back">cancel</button>
+<button class="next"> Pay Now</button>        
+</fieldset>
 
+<fieldset id="pay_thanks">
+  <legend class="thanks">Thanks for your order</legend>
+  <h2>Thanks for your order</h2>
+  <button class="back_menu">back to menu</button>
+  <button class="next">check Out X </button>
+
+</fieldset>
+
+
+<!-- END Jesus added -->
     <section id="selected-beer" class="hidden">
       <article class="form-screen" id="modal-one">
         <input id="close-1" type="button" class="close" value="✕" />
