@@ -17,7 +17,7 @@
       </main>
       
       <template>
-        
+        <fieldset class="intro">
         <div class="b-img">
           <img src="" alt="" class="beer-img">
           <!-- this style is temporal -->
@@ -33,7 +33,9 @@
 
            <h1 class="name"><span>Name:</span></h1>
            <h1 class="cate"><span>Category:</span></h1>
-           <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
+          
+            <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
+           <label>Quantity:</label>
            <input type="number" id="quantity" name="quantity" min="1" max="10"
             required>
            <input type="checkbox" />
@@ -41,8 +43,11 @@
             <button class="next">Order ></button>
           </div>
     <!-- <button>order</button> -->
-        </article>
+        </article></fieldset>
     </template>
+  <div class="btn_container">
+    <button class="all_orders">all Orders</button>
+  </div>
 <!-- this a new form section Jesus added instead of the popup -->
 <fieldset id="show_order">
   <legend class="fieldset_heading">Your Order</legend>
