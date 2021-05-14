@@ -26,9 +26,9 @@ function get() {
      const template = document.querySelector("template").content;
   const copy = template.cloneNode(true);
   const img_url =beer.label
-  copy.querySelector(".name").textContent = beer.name;
-  copy.querySelector(".cate").textContent = beer.category;
-  copy.querySelector(".alc-lvl").textContent = beer.alc;
+  copy.querySelector(".name").textContent =('Name: ')+beer.name;
+  copy.querySelector(".cate").textContent = ('Type: ')+ beer.category;
+  copy.querySelector(".alc-lvl").textContent =('vol: ')+ beer.alc;
   const amount = copy.querySelector("input[type=number]")
   amount.addEventListener('change', getOrders)
   copy.querySelector(".beer-img").src = img_url;
@@ -41,16 +41,26 @@ function get() {
   
     const div = document.createElement('div')
     div.innerHTML = `
-    <img ${img_url}>
+   
     <h3>${beer.name}</h3>
     <p>${e.target.value}</p>
     ` 
   
     const content = document.querySelector('.checkbox_container')
     content.appendChild(div)
+    findTotal()
     
   }
- 
+  function findTotal(){
+    let arr = document.getElementsByName('quantity');
+    let tot=0;
+    for(let i=0;i<arr.length;i++){
+        if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById('total').value = tot;
+}
+
   
   
 /*  section Modal */

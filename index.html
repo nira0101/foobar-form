@@ -12,11 +12,12 @@
         <h1>FOOBAR</h1>
       </header>
       <main>
-        <h2>Please select the beer you like</h2>
-      </main>
-      <div class="formwrapper">
-      <form id="form_principal">
+        <h2>Please enter a quantity of beers you like</h2>
+      
+      <div id="form_container">
+        <form id="form_principal">
       <template>
+         
         <div class="b-img">
           <img src="" alt="" class="beer-img">
           <!-- this style is temporal -->
@@ -30,13 +31,14 @@
      
         <article class="beer-desc">
 
-           <h1 class="name"><span>Name:</span></h1>
-           <h1 class="cate"><span>Category:</span></h1>
-           <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
-           <label>Quantity:</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="10"
+           <h3 class="name"><span>Name:</span></h3>
+           <h3 class="cate"><span>Category:</span></h3>
+           <h3 class="alc-lvl"><span>Alcohol level:</span></h3>
+           <label>Quantity of beers:</label>
+          
+           <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="fx.3"
             required>
-           <input type="checkbox"/>
+
           <div class="btn_container">
             <button class="next">Order ></button>
           </div>
@@ -48,6 +50,7 @@
   </div>
 </form>         
 </div>
+</main>
 <!-- this a new form section Jesus added to the popup -->
 <!-- forms added to the modal -->
 <!-- first section of the modal -->
@@ -74,8 +77,16 @@
             </fieldset>
             </form>
           </div>
-         
+
+          
+          Total : <input type="text" name="total" id="total"/>
+
+          
         <input id="next" type="button" class="next hidden" value="Next"/>
+     
+     
+     
+     
       </article> 
       <!-- section payment  -->
       <article class="form-screen hidden" id="payment">
