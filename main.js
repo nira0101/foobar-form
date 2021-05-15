@@ -26,11 +26,11 @@ function get() {
      const template = document.querySelector("template").content;
   const copy = template.cloneNode(true);
   const img_url =beer.label
-  copy.querySelector(".name").textContent =('Name: ')+beer.name;
+  copy.querySelector(".name").textContent =('Name: ')+ beer.name;
   copy.querySelector(".cate").textContent = ('Type: ')+ beer.category;
   copy.querySelector(".alc-lvl").textContent =('vol: ')+ beer.alc;
   const amount = copy.querySelector("input[type=number]")
-  amount.addEventListener('change', getOrders)
+  amount.addEventListener('change', getOrders);
   copy.querySelector(".beer-img").src = img_url;
   copy.querySelector("button").addEventListener("click", displayModal);
   document.querySelector("main").appendChild(copy);
