@@ -11,6 +11,13 @@
       <header>
         <h1>FOOBAR</h1>
       </header>
+      <div class="checkbox_container" style="background-color: red;">
+        <h1>your Orders</h1>
+        <button class="confirm">confirm</button>
+
+        <label>total:</label>
+        <input type="text" name="total" id="total" />
+      </div>
       <main>
         <h2>Please select the beer you like</h2>
       </main>
@@ -33,15 +40,12 @@
            <h1 class="name"><span>Name:</span></h1>
            <h1 class="cate"><span>Category:</span></h1>
            <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
-           <label>Quantity:</label>
-           <input type="number" id="quantity" name="quantity" min="1" max="10"
-            required>
-           <input type="checkbox"/>
           <div class="btn_container">
-            <button class="next">Order ></button>
+            <button class="next">add to cart</button>
           </div>
         </article>
     </template>
+   
     
   <div class="btn_container">
     <button  class="button">all Orders</button>
@@ -52,39 +56,14 @@
 <!-- forms added to the modal -->
 <!-- first section of the modal -->
     <section id="selected-beer" class="hidden">
-      <article class="form-screen" id="modal-one">
-        <input id="close-1" type="button" class="close" value="✕" />
-        <div id="progress-bar">
-          <h2 class="fill">1</h2>
-          <div class="line"></div>
-          <h2>2</h2>
-          <div class="line"></div>
-          <h2>✔</h2>
-        </div>  
-          <h1>modal-one</h1>
-          <div class="order_container">
-            <form>
-            <fieldset id="show_order">
-              <legend class="fieldset_heading">Your Order</legend>
-              <div class="flex_top">
-                <h2>Please confirm your order</h2>
-                <div class="checkbox_container"></div>
-              </div>
-              
-            </fieldset>
-            </form>
-          </div>
-         
-        <input id="next" type="button" class="next hidden" value="Next"/>
-      </article> 
+      
       <!-- section payment  -->
-      <article class="form-screen hidden" id="payment">
+      <article class="form-screen " id="payment">
         <input id="close-2" type="button" class="close" value="✕" />
         
         <div id="progress-bar">
-          <h2 id="previous">1</h2>
-          <div class="line"></div>
-          <h2 class="fill">2</h2>
+          
+          <h2 class="fill">1</h2>
           <div class="line"></div>
           <h2>✔</h2>
         </div>
@@ -121,9 +100,8 @@
       <article class="form-screen hidden" id="confirm">
         <input id="close-3" type="button" class="close" value="✕" />
         <div id="progress-bar">
+      
           <h2>1</h2>
-          <div class="line"></div>
-          <h2>2</h2>
           <div class="line"></div>
           <h2 id="done">✔</h2>
         </div>
