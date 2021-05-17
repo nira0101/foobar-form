@@ -36,10 +36,10 @@ function get() {
   amount.addEventListener('click', ()=>{
     const div = document.createElement('div')
     div.innerHTML = `
-    <img src="${beer.label}" >
+    <img src="${beer.label}" class="atc-img" >
     <h3>${beer.name}</h3>
     <h4>${beer.category}</h4>
-    <button class="c">close</button>
+    <button class="c">X</button>
   
     <label>Quantity:</label>
       <div class="amount">
@@ -52,19 +52,51 @@ function get() {
 
       
     `
+    //rmove the selected item
     const close = div.querySelector(".c");
     close.addEventListener("click", ()=>{
 
       div.remove();
     });
+
+    //increment and decrement
+    let btnAdd = div.querySelector("#add");
+    let btnSub = div.querySelector("#subtract");
+    let input = div.querySelector("#counter");
+
+  btnAdd.addEventListener("click", ()=>{
+    input.value = parseInt(input.value) + 1;
+if(input.value === input.value){
+  document.querySelector("#total").value = input.value; 
+}
+else{
+  document.querySelector("#total").value = input.value ++; 
+}
+    
+ 
+  })
+  btnSub.addEventListener("click", ()=>{
+    input.value = parseInt(input.value) - 1;
+    if(input.value === input.value){
+      document.querySelector("#total").value = input.value; 
+    }
+    else{
+      document.querySelector("#total").value = input.value --; 
+    }
+
+  })
+
+
  
     const content = document.querySelector('.checkbox_container');
     document.querySelector(".confirm").addEventListener("click", displayModal);
+   
     
     content.appendChild(div)
 
 
   })
+
 
   document.querySelector("main").appendChild(copy);
   
@@ -76,10 +108,10 @@ function get() {
 
 
 
-/*   function findTotal(){
+ /* function findTotal(){
  
 
-    const arr = document.getElementsByTagName('quantity');
+    const arr = document.querySelector('.counter');
 
     const total=0;
 
@@ -95,7 +127,7 @@ function get() {
 
     }
 
-  } */
+  }  */
  
   
   
