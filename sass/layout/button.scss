@@ -1,13 +1,14 @@
 @use "../base/color";
 button {
   margin: 20px;
-  width: 150px;
+  width: 100px;
   height: 30px;
-  background: color.$head-color;
+  background-color: grey;
+  /*  background: color.$head-color; */
   color: white;
-  text-transform: uppercase;
+  text-transform: to-lower-case($string: "");
   font-weight: bold;
-  border: 2px solid color.$head-color;
+  /* border: 2px solid color.$head-color; */
   border-radius: 40px;
   overflow: hidden;
   cursor: pointer;
