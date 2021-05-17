@@ -26,17 +26,9 @@ function get() {
      const template = document.querySelector("template").content;
   const copy = template.cloneNode(true);
   const img_url =beer.label
-<<<<<<< HEAD
-  copy.querySelector(".name").textContent =('Name: ')+ beer.name;
-  copy.querySelector(".cate").textContent = ('Type: ')+ beer.category;
-  copy.querySelector(".alc-lvl").textContent =('vol: ')+ beer.alc;
-  const amount = copy.querySelector("input[type=number]")
-  amount.addEventListener('change', getOrders);
-=======
   copy.querySelector(".name").textContent = ('Name: ')+beer.name;
   copy.querySelector(".cate").textContent = ('Type: ')+beer.category;
   copy.querySelector(".alc-lvl").textContent = ('vol: ')+beer.alc;
->>>>>>> a8dad9cb111ea255dfff502cd60646701c51e247
   copy.querySelector(".beer-img").src = img_url;
   
   //add to cart
@@ -44,33 +36,11 @@ function get() {
   amount.addEventListener('click', ()=>{
     const div = document.createElement('div')
     div.innerHTML = `
-<<<<<<< HEAD
-   
-=======
   
->>>>>>> a8dad9cb111ea255dfff502cd60646701c51e247
     <h3>${beer.name}</h3>
     <h4>${beer.category}</h4>
     <button class="c">remove</button>
   
-<<<<<<< HEAD
-    const content = document.querySelector('.checkbox_container')
-    content.appendChild(div)
-    findTotal()
-    
-  }
-  function findTotal(){
-    let arr = document.getElementsByName('quantity');
-    let tot=0;
-    for(let i=0;i<arr.length;i++){
-        if(parseInt(arr[i].value))
-            tot += parseInt(arr[i].value);
-    }
-    document.getElementById('total').value = tot;
-}
-
-  
-=======
     <label>Quantity:</label>
       <div class="amount">
         <button id="subtract">-</button>
@@ -151,7 +121,6 @@ else{
 
     }
   } */
->>>>>>> a8dad9cb111ea255dfff502cd60646701c51e247
   
 /*  section Modal */
   function displayModal(){
