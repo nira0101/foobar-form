@@ -43,13 +43,17 @@ function get() {
     <h3>${beer.name}</h3>
     <h4>${beer.category}</h4>
     <p>${e.target.value}</p>
+ 
     <label>Quantity:</label>
     <input type="number" id="quantity" name="quantity" min="1" max="10"
             required>
 
-    ` 
+    `  
+    
  
     const content = document.querySelector('.checkbox_container');
+
+
     document.querySelector(".confirm").addEventListener("click", displayModal);
     content.appendChild(div)
     findTotal();
@@ -59,17 +63,17 @@ function get() {
 
   function findTotal(){
  
-
+console.log(findTotal)
     const arr = document.getElementsByTagName('quantity');
 
-    const total=0;
+    const tot=0;
 
     for(var i=0;i<arr.length;i++){
 
         if(parseInt(arr[i].value)){
-          total += parseInt(arr[i].value);
+          tot += parseInt(arr[i].value);
           
-     document.getElementById('total').value= total; 
+     document.getElementById('total').value= tot; 
         }
 
             
