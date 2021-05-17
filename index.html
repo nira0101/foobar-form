@@ -11,21 +11,9 @@
       <header>
         <h1>FOOBAR</h1>
       </header>
-      <div class="checkbox_container" style="background-color: red;">
-        <h1>your Orders</h1>
-        <button class="confirm">confirm</button>
-
-        <div class="second-temp">
-          <h1 class="bn"></h1>
-          <h1 class="desc"></h1>
-        </div>
-
-        <label>total:</label>
-        <input type="text" name="total" id="total" />
-      </div>
       <main>
         <h2>Please enter a quantity of beers you like</h2>
-      
+      </main>
       <div id="form_container">
         <form id="form_principal">
       <template>
@@ -43,34 +31,71 @@
      
         <article class="beer-desc">
 
-           <h1 class="name"><span>Name:</span></h1>
-           <h1 class="cate"><span>Category:</span></h1>
-           <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
+           <h3 class="name"><span>Name:</span></h3>
+           <h3 class="cate"><span>Category:</span></h3>
+           <h3 class="alc-lvl"><span>Alcohol level:</span></h3>
+           <label>Quantity of beers:</label>
+          
+           <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="fx.3"
+            required>
+
           <div class="btn_container">
-            <button class="next">add to cart</button>
+            <button class="next">Order ></button>
           </div>
         </article>
     </template>
-   
-    
+ </form>  
+
   <div class="btn_container">
     <button  class="button">all Orders</button>
   </div>
-</form>         
-</div>
-</main>
+
+
 <!-- this a new form section Jesus added to the popup -->
 <!-- forms added to the modal -->
-<!-- first section of the modal -->
+<!-- MODAL -->
     <section id="selected-beer" class="hidden">
-      
+      <article class="form-screen" id="modal-one">
+        <input id="close-1" type="button" class="close" value="✕" />
+        <div id="progress-bar">
+          <h2 class="fill">1</h2>
+          <div class="line"></div>
+          <h2>2</h2>
+          <div class="line"></div>
+          <h2>✔</h2>
+        </div>  
+          <h1>modal-one</h1>
+          <div class="order_container">
+            <form>
+            <fieldset id="show_order">
+              <legend class="fieldset_heading">Your Order</legend>
+              <div class="flex_top">
+                <h2>Please confirm your order</h2>
+                <div class="checkbox_container"></div>
+              </div>
+              
+            </fieldset>
+            </form>
+          </div>
+
+          
+          Total : <input type="number" name="total" id="total"/>
+
+          
+        <input id="next" type="button" class="next hidden" value="Next"/>
+     
+     
+     
+     
+      </article> 
       <!-- section payment  -->
-      <article class="form-screen " id="payment">
+      <article class="form-screen hidden" id="payment">
         <input id="close-2" type="button" class="close" value="✕" />
         
         <div id="progress-bar">
-          
-          <h2 class="fill">1</h2>
+          <h2 id="previous">1</h2>
+          <div class="line"></div>
+          <h2 class="fill">2</h2>
           <div class="line"></div>
           <h2>✔</h2>
         </div>
@@ -107,8 +132,9 @@
       <article class="form-screen hidden" id="confirm">
         <input id="close-3" type="button" class="close" value="✕" />
         <div id="progress-bar">
-      
           <h2>1</h2>
+          <div class="line"></div>
+          <h2>2</h2>
           <div class="line"></div>
           <h2 id="done">✔</h2>
         </div>
@@ -130,6 +156,9 @@
         <input type="submit" id="submit" value="Submit" class="hidden"/>
       </article>
     </section>
-    <script type="module" src="/main.js"></script>
+           
+</div>
+  
+   <script type="module" src="/main.js"></script>
   </body>
 </html>
