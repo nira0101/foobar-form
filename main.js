@@ -27,31 +27,29 @@ function get() {
   const copy = template.cloneNode(true);
   const img_url =beer.label
   copy.querySelector(".name").textContent = ('Name: ')+beer.name;
-  copy.querySelector(".cate").textContent = ('Category: ')+beer.category;
-  copy.querySelector(".alc-lvl").textContent = ('alcohol-level: ')+beer.alc;
+  copy.querySelector(".cate").textContent = ('Type: ')+beer.category;
+  copy.querySelector(".alc-lvl").textContent = ('vol: ')+beer.alc;
   copy.querySelector(".beer-img").src = img_url;
-
+  
   //add to cart
   const amount = copy.querySelector(".next")
   amount.addEventListener('click', ()=>{
     const div = document.createElement('div')
     div.innerHTML = `
-    <img src="${beer.label}" class="atc-img" >
+  
     <h3>${beer.name}</h3>
     <h4>${beer.category}</h4>
-    <button class="c">X</button>
+    <button class="c">remove</button>
   
     <label>Quantity:</label>
       <div class="amount">
         <button id="subtract">-</button>
-        <input type="number" value="0"  id="counter" >
+        <input type="number" name='total' value="0"  id="counter" >
         <button id="add">+</button>
       </div>
 
-      
-
-      
-    `
+    ` 
+    /*  <img src="${beer.label}" class="atc-img" > */
     //rmove the selected item
     const close = div.querySelector(".c");
     close.addEventListener("click", ()=>{
@@ -99,37 +97,30 @@ else{
 
 
   document.querySelector("main").appendChild(copy);
-  
-
- }
-
-
-
-
-
-
- /* function findTotal(){
  
 
-    const arr = document.querySelector('.counter');
+ }
+ 
 
-    const total=0;
+
+
+/*   function findTotal(){
+    let arr = document.getElementsByName('total');
+
+    let total=0;
 
     for(var i=0;i<arr.length;i++){
 
         if(parseInt(arr[i].value)){
           total += parseInt(arr[i].value);
           
-     document.getElementById('total').value= total; 
+     document.getElementById('counter').value= total; 
         }
 
             
 
     }
-
-  }  */
- 
-  
+  } */
   
 /*  section Modal */
   function displayModal(){
