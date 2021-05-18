@@ -13,6 +13,7 @@
        
   
       </header>
+      <aside>
       <div class="checkbox_container" style="background-color: red;">
         <h1>your Orders</h1>
 
@@ -20,14 +21,11 @@
          
 <div></div>
 <form>
-        <label>TOTAL:</label>
-        <input type="text" name="total" id="total" />
-    
-    
+  Total : <input type="number" name="total" id="total"/>
       </form>
 
       </div> 
-
+</aside>
 
       <main>
       
@@ -39,7 +37,7 @@
         <section class="cards">
         <div class="b-img">
           <img src="" alt="" class="beer-img">
-          <!-- this style is temporal -->
+          
          
         </div>
      
@@ -48,7 +46,13 @@
            <h1 class="name"><span>Name:</span></h1>
            <h1 class="cate"><span>Category:</span></h1>
            <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
-          <div class="btn_container">
+          <div class="btn_container"> 
+          <div class="amount">
+              
+              <label>Quantity: <button id="add">+</button><input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="fx.3"
+            required></label> <button id="subtract">-</button>
+            
+            </div> 
             <button class="next">add to cart</button>
           </div>
         </article>
@@ -56,17 +60,11 @@
     </template>
  </form>  
 
-  <div class="btn_container">
-    <button  class="button">all Orders</button>
-  </div>
+ 
 
-
-<!-- this a new form section Jesus added to the popup -->
-<!-- forms added to the modal -->
 <!-- MODAL -->
-    <section id="selected-beer" class="hidden">
-      
-      <!-- section payment  -->
+ <section id="selected-beer" class="hidden">  
+ <!-- section payment  -->
       <article class="form-screen " id="payment">
         <input id="close-2" type="button" class="close" value="✕" />
         
@@ -97,44 +95,42 @@
               CVC
             <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="3" placeholder="CVC">
             </label>
-           <!--  <button class="back">cancel</button>
-            <button class="next"> Pay Now</button>  -->       
+                
             </fieldset>
           </form>
         </div>
-        <input id="next" type="button" class="next hidden" value="Next"/>
+        <!-- <input id="next" type="button" class="next hidden" value="Next"/> -->
         <button id="back" class="back"><a>Pay now</a></button>
         </article>
- <!-- section confirm payment thanks --> 
-      <article class="form-screen hidden" id="confirm">
-        <input id="close-3" type="button" class="close" value="✕" />
-        <div id="progress-bar">
-      
-          <h2>1</h2>
-          <div class="line"></div>
-          <h2 id="done">✔</h2>
-        </div>
-          <h1>confirm</h1>
-          <div class="order_container">
-            <form>
-              <fieldset id="pay_thanks">
-                <legend class="thanks">Thanks for your order</legend>
-                <h2>Thanks for your order</h2>
-                <!-- <button class="back_menu">back to menu</button>
-                <button class="next">check Out X </button> -->
-              
-             
-              <!-- <input id="next" type="button" class="next hidden" value="Next"/> -->
-              <!-- <button id="next" class="next"><a></a></button> -->
-            </fieldset>
-            </form>
-          </div>
-        <input type="submit" id="submit" value="Submit" class="hidden"/>
-      </article>
-    </section>
-           
+<!-- section confirm payment thanks --> 
+  <article class="form-screen hidden" id="confirm">
+    <input id="close-3" type="button" class="close" value="✕" />
+    <div id="progress-bar">
+      <h2>1</h2>
+      <div class="line"></div>
+    
+      <div class="line"></div>
+      <h2 id="done">✔</h2>
+    </div>
+      <h1>confirm</h1>
+      <div class="order_container">
+        <form>
+          <fieldset id="pay_thanks">
+            <legend class="thanks">Thanks for your order</legend>
+            <h2>Thanks for your order</h2>
+            
+            <button class="next">Check out </button>
+          
+         
+                </fieldset>
+        </form>
+      </div>
+    <input type="submit" id="submit" value="Submit" class="hidden"/>
+  </article>
+</section>
+       
 </div>
-  
-   <script type="module" src="/main.js"></script>
-  </body>
+
+<script type="module" src="/main.js"></script>
+</body>
 </html>
