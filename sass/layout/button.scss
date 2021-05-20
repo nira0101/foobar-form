@@ -3,8 +3,8 @@ button {
   margin: 20px;
   width: 100px;
   height: 30px;
-
-  background: color.$head-color;
+  background-color: green;
+  /* background: color.$head-color; */
   color: white;
   text-transform: to-lower-case($string: "");
   font-weight: bold;

@@ -1,20 +1,31 @@
 .cards {
   display: flex;
   background-color: rgb(249, 252, 251);
-  border: 1px solid black;
+
   width: 15.5vw;
   margin: 10px;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 10px;
   gap: 5px;
   justify-content: space-between;
   overflow-wrap: none;
+  border-radius: 10px;
+  box-shadow: 1px 7px 14px -3px;
 }
 // check this flex
 .beer-desc input button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.cards {
+  background-color: rgb(238, 236, 236);
+  border-radius: 5px;
+  margin: 10px;
+  font-family: "Times New Roman", Times, serif;
+  flex-wrap: wrap;
   justify-content: center;
 }
 main {
@@ -24,10 +35,28 @@ main {
   grid-gap: 5px;
 }
 .beer-img {
-  width: 50%;
+  width: 150px;
+  height: 150px;
   display: flex;
   padding: 10px;
   margin: auto;
   border-radius: 50%;
   flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  font-size: 16px;
+  font-weight: normal;
+}
+input {
+  width: 60px;
+  height: 5px;
+  background-color: #ffffff;
+  color: rgb(24, 22, 22);
+  font-size: 15px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

@@ -7,6 +7,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init(){
   get();
+  /* post() */
  
 } 
 
@@ -18,7 +19,15 @@ function get() {
       .then((e) => e.json())
       .then((data) => data.forEach(showBeer));
   }
- 
+/*  function post(data, url) {
+  const postData = JSON.stringify(data);
+  fetch('https://foobardata.herokuapp.com/order', {
+    method: "post"
+  
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+} */
 
 
   function showBeer(beer){
@@ -45,12 +54,8 @@ function get() {
    
    <h3>${beer.name}</h3>
    <p>${e.target.value}</p>
-   <button class="c">cancel order </button>
-   
-            
-  <button id="subtract">-</button>
-             
-  <button id="add">+</button>
+   <button class="c">cancel order </button> 
+        
            
    ` 
    //rmove the selected item
@@ -59,7 +64,7 @@ function get() {
 
      div.remove();
    });
-   
+  
    const content = document.querySelector('.checkbox_container')
    document.querySelector(".confirm").addEventListener("click", displayModal);
 
@@ -78,29 +83,13 @@ function get() {
            tot += parseInt(arr[i].value);
    }
    document.getElementById('total').value = tot;
+   
 }
-  /* //add to cart
-  const amount = copy.querySelector("input[type=number]")
-  amount.addEventListener('click', ()=>{
-    const div = document.createElement('div')
-    div.innerHTML = `
-    <img src="${beer.label}" class="atc-img" >
-    <h3>${beer.name}</h3>
-    <h4>${beer.category}</h4>
-    <button class="c">X</button>
-    ` */
-    
-    
-    //rmove the selected item
-    /* const close = div.querySelector(".c");
-    close.addEventListener("click", ()=>{
 
-      div.remove();
-      */
-  /*   });
 
-    
-    //increment and decrement
+
+  
+   /*  //increment and decrement
     let btnAdd = div.querySelector("#add");
     let btnSub = div.querySelector("#subtract");
     let input = div.querySelector("#qty");
@@ -146,28 +135,12 @@ else{
  
 
  }
-  */
+  */ 
  
 
 
 
-/*   function findTotal(){
-    let arr = document.getElementsByName('total');
 
-    let total=0;
-
-    for(var i=0;i<arr.length;i++){
-
-        if(parseInt(arr[i].value)){
-          total += parseInt(arr[i].value);
-          
-     document.getElementById('counter').value= total; 
-        }
-
-            
-
-    }
-  } */
   
   
 /*  section Modal */
