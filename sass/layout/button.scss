@@ -1,5 +1,6 @@
 @use "../base/color";
-button {
+.atc,
+.confirm {
   margin: 20px;
   width: 150px;
   height: 30px;
@@ -42,4 +43,13 @@ button {
 .blurred {
   filter: blur(10px);
   -webkit-filter: blur(10px);
+}
+
+.submit {
+  height: 50px;
+  width: 96%;
+  margin-right: 6vw;
+  background-color: color.$head-color;
+  color: white;
+  margin-bottom: 2vw;
 }

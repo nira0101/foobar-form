@@ -12,36 +12,46 @@
         <h1>FOOBAR</h1>
   
       </header>
-      
-        
+      <div class="checkbox_container" style="background-color: red;">
+        <h1>your Orders</h1>
+        <button class="pay-confirm">confirm</button>
+         
+<div></div>
+<form>
+        <label>TOTAL:</label>
+        <input type="text" name="total" id="total" />
+    
+    
+      </form>
+
+      </div> 
+
+
       <main>
+      
       </main>
        
-      <div id="form_container">
-        <form id="form_principal">
+      
       <template>
-         
-        <section class='cards'>
+        <section class="cards">
+        <div class="b-img">
           <img src="" alt="" class="beer-img">
-          <!-- this style is temporal -->
+         
+        </div>
+     
         <article class="beer-desc">
 
-           <h3 class="name"><span>Name:</span></h3>
-           <h3 class="cate"><span>Category:</span></h3>
-           <h3 class="alc-lvl"><span>Alcohol level:</span></h3>
-           <label>Quantity of beers:</label>
-          
-           <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="fx.3"
-            required>
-
+           <h1 class="name"><span>Name:</span></h1>
+           <h1 class="cate"><span>Category:</span></h1>
+           <h1 class="alc-lvl"><span>Alcohol level:</span></h1>
           <div class="btn_container">
-            <button class="next">Add to order ></button>
+            <button class="atc">add to cart</button>
           </div>
         </article>
       </section>
     </template>
- </form>  
-
+   
+    
   <div class="btn_container">
     <button  class="button">all Orders</button>
   </div>
@@ -51,55 +61,65 @@
 <!-- forms added to the modal -->
 <!-- MODAL -->
     <section id="selected-beer" class="hidden">
-      <article class="form-screen" id="modal-one">
-        <input id="close-1" type="button" class="close" value="✕" />
-        <div id="progress-bar">
-          <h2 class="fill">1</h2>
-          <div class="line"></div>
-          <h2>2</h2>
-          <div class="line"></div>
-          <h2>✔</h2>
-        </div>  
-          <h1>modal-one</h1>
-          <div class="order_container">
-            <form>
-            <fieldset id="show_order">
-              <legend class="fieldset_heading">Your Order</legend>
-              <div class="flex_top">
-                <h2>Please confirm your order</h2>
-                <div class="checkbox_container"></div>
-              </div>
-              
-            </fieldset>
-            </form>
-          </div>
-
-          
-          Total : <input type="number" name="total" id="total"/>
-
-          
-        <input id="next" type="button" class="next hidden" value="Next"/>
-     
-     
-     
-     
-      </article> 
+      
       <!-- section payment  -->
-      <article class="form-screen hidden" id="payment">
+      <article class="form-screen " id="payment">
         <input id="close-2" type="button" class="close" value="✕" />
         
         <div id="progress-bar">
-          <h2 id="previous">1</h2>
-          <div class="line"></div>
-          <h2 class="fill">2</h2>
+          
+          <h2 class="fill">1</h2>
           <div class="line"></div>
           <h2>✔</h2>
         </div>
         <h1>payment</h1>
         <!-- JESUS 03 -->
         <div class="order_container">
-          <form>
-            <fieldset id="pay_order">
+         <div class="card-row">
+          <div class="visa">
+            <img src="/visa.png" class="card-img">
+          </div>
+          <div class="mastercard">
+            <img src="/kisspng-company-business-automated-clearing-house-logo-e-c-mastercard-logo-5a731d7c39ab71.9266628815174936282362.png" class="card-img">
+          </div>
+          <div class="mobilepay">
+            <img src="/mobilepay.png" class="card-img">
+          </div>
+         </div>
+          <form id="form">
+
+            <div class="form-group">
+              <label for="your_name">Name</label>
+              <input id="your_name" type="text" name="your_name" required />
+              <span id="error-1" class="error hidden">Name is required. Please, enter your name.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="c_number"> Card Number</label>
+              <input id="c_number" type="number" name="card_number" minlength="16" required />
+              <span id="error-2" class="error hidden">Card number is required. Please, enter your card number.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="e_date">Expiry Date</label>
+              <input id="e_date" type="date" name="e_date" minlength="20" placeholder="MM / YY"  required />
+  
+              <span id="error-3" class="error hidden">Expiry date is required. Please, enter your expiry date.</span>
+            </div>
+            <div class="form-group">
+              <label for="s_number">Security Number</label>
+              <input id="s_number" type="number" name="s_number" minlength="20" placeholder="123"  required />
+  
+              <span id="error-4" class="error hidden">security number is required. Please, enter your security number.</span>
+            </div>
+            <div class="form-group">
+              <label for="postal-code">zip/postal code</label>
+              <input id="p_code" type="text" name="postal code"  />
+  
+             
+            </div>
+            
+           <!--  <fieldset id="pay_order">
               <legend class="payment_info">Payment info</legend>
               <h2>Payment information</h2>
               <label> Name
@@ -116,21 +136,21 @@
               CVC
             <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="3" placeholder="CVC">
             </label>
-           <!--  <button class="back">cancel</button>
-            <button class="next"> Pay Now</button>  -->       
-            </fieldset>
+             <button class="back">cancel</button>
+            <button class="next"> Pay Now</button>       
+            </fieldset> -->
           </form>
+          <button id="submit" class="submit" >Submit and order</button>
         </div>
-        <input id="next" type="button" class="next hidden" value="Next"/>
-        <button id="back" class="back"><a>Pay now</a></button>
+      
+        
         </article>
  <!-- section confirm payment thanks --> 
       <article class="form-screen hidden" id="confirm">
         <input id="close-3" type="button" class="close" value="✕" />
         <div id="progress-bar">
+      
           <h2>1</h2>
-          <div class="line"></div>
-          <h2>2</h2>
           <div class="line"></div>
           <h2 id="done">✔</h2>
         </div>
@@ -149,11 +169,11 @@
             </fieldset>
             </form>
           </div>
-        <input type="submit" id="submit" value="Submit" class="hidden"/>
+       
       </article>
     </section>
            
-</div>
+
   
    <script type="module" src="/main.js"></script>
   </body>
