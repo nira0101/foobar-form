@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-
-
-  
-    
   
   <body>
     <div id="app">
@@ -23,11 +19,14 @@
       
 
 <div class="container"> 
-  <div class="checkbox_container" style="background-color:#344e41;">
-    <h1>Your Orders</h1>
-    <div></div>
-    <button class="pay-confirm">confirm</button>
+  
+  <div class="checkbox_container">
+    <div class="box_order"> <h1 class="your_order">Your Order</h1>
+    
+    <button class="pay-confirm">PAY -here</button></div>
+     <div>
      
+     </div>
 
 <form>
     <!-- <label>TOTAL:</label>
@@ -65,7 +64,7 @@
  
 
 
-<!-- this a new form section Jesus added to the popup -->
+
 <!-- forms added to the modal -->
 <!-- MODAL -->
     <section id="selected-beer" class="hidden">
@@ -122,31 +121,8 @@
             </div>
             <div class="form-group">
               <label for="postal-code">zip/postal code</label>
-              <input id="p_code" type="text" name="postal code"  />
-  
-             
+              <input id="p_code" type="text" name="postal code" />
             </div>
-            
-           <!--  <fieldset id="pay_order">
-              <legend class="payment_info">Payment info</legend>
-              <h2>Payment information</h2>
-              <label> Name
-              <input type="text" name="fname" required placeholder="Your Name">
-            </label>
-            <label >
-              Card number
-              <input name="credit-number" class="cc-number" type="tel" pattern="[0-9]-[0-9][0-9]-[0-9]" maxlength="16" placeholder="Card Number">
-            </label> Expires End
-            <label>
-            <input name="credit-expires" class="cc-expires" type="tel" pattern="\d*" maxlength="7" placeholder="MM / YY">
-            </label>
-            <label>
-              CVC
-            <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="3" placeholder="CVC">
-            </label>
-             <button class="back">cancel</button>
-            <button class="next"> Pay Now</button>       
-            </fieldset> -->
           </form>
           <button id="submit" class="submit" >Submit and order</button>
         </div>
@@ -168,12 +144,7 @@
               <fieldset id="pay_thanks">
                 <legend class="thanks">Thanks for your order</legend>
                 <h2>Thanks for your order</h2>
-                <!-- <button class="back_menu">back to menu</button>
-                <button class="next">check Out X </button> -->
-              
-             
-              <!-- <input id="next" type="button" class="next hidden" value="Next"/> -->
-              <!-- <button id="next" class="next"><a></a></button> -->
+                
             </fieldset>
             </form>
           </div>

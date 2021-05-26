@@ -1,27 +1,40 @@
 @use "../base/color";
 .atc,
-.confirm {
-  margin: 20px;
+.pay-confirm {
   width: 150px;
   height: 30px;
-  background: color.$head-color;
-  color: white;
+  background: var(--secondary-color);
+  border: none;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   font-weight: bold;
-  border: 2px solid color.$head-color;
-  border-radius: 40px;
-  overflow: hidden;
+
+  border-radius: 5px;
+  /* overflow: hidden; */
   cursor: pointer;
   outline: none;
   z-index: 1;
-  &::after {
+}
+button.pay-confirm {
+  background-color: orange;
+  color: wheat;
+  gap: 10px;
+}
+
+/* .atc
+.confirm {
+  margin: 20px;
+  
+  
+  ;*/
+/*  &::after {
     width: 0%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: -1;
     content: "";
-    /*  background-color: lightblue; */
+    background-color: lightblue;
     position: absolute;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -33,17 +46,17 @@
     &:hover::after {
       width: 100%;
     }
-  }
-}
+  } 
+}*/
 
-.hidden {
+/* .hidden {
   visibility: hidden;
 }
 
 .blurred {
   filter: blur(10px);
   -webkit-filter: blur(10px);
-}
+} */
 
 .submit {
   height: 50px;
