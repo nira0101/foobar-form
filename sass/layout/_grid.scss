@@ -1,0 +1,17 @@
+@use "../base/color";
+@use "../base/fonts";
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  margin: 5vw;
+
+  main {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .checkbox_container {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}

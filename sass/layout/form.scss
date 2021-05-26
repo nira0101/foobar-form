@@ -1,4 +1,5 @@
 @use "../base/color";
+@use "../base/fonts";
 
 .form-screen {
   position: relative;
@@ -176,4 +177,18 @@ input[type="number"] {
 
 .hidden {
   visibility: hidden;
+}
+
+.pay-confirm {
+  font-family: fonts.$monteserrat;
+  font-size: 16px;
+  padding: 0.5vw;
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-weight: bolder;
 }

@@ -37,6 +37,7 @@ function get() {
   amount.addEventListener('click', (p)=>{
     const div = document.createElement('div')
     div.innerHTML = `
+    <section id="addtc"> 
     <img src="${beer.label}" class="atc-img" >
     <h3 class = b_name>${beer.name}</h3>
     <h4>${beer.category}</h4>
@@ -48,6 +49,7 @@ function get() {
         <input type="number" name='total' value="0"  id="counter" >
         <button id="add">+</button>
       </div>
+      <section>
 
       
 
@@ -68,23 +70,23 @@ function get() {
 
   btnAdd.addEventListener("click", ()=>{
     input.value = parseInt(input.value) + 1;
-if(input.value === input.value){
+/* if(input.value === input.value){
   document.querySelector("#total").value = input.value; 
 }
 else{
   document.querySelector("#total").value = input.value ++; 
-}
+} */
     
  
   })
   btnSub.addEventListener("click", ()=>{
     input.value = parseInt(input.value) - 1;
-    if(input.value === input.value){
+  /*   if(input.value === input.value){
       document.querySelector("#total").value = input.value; 
     }
     else{
       document.querySelector("#total").value = input.value --; 
-    }
+    } */
 
   })
 

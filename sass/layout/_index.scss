@@ -2,6 +2,8 @@
 @forward "button";
 @forward "form";
 @forward 'cards';
+@forward 'grid';
+@forward 'text';
 * {
   margin: 0;
   padding: 0;
@@ -9,5 +11,5 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(248, 117, 117);
+  background-color: var(--background-color);
 }

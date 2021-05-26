@@ -8,14 +8,13 @@ header {
 }
 
 header {
-  h1 {
-    font-family: fonts.$monoton;
-    font-size: 80px;
-    font-weight: 200;
-    margin: 0;
-    color: white;
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: center;
+
+  .foo-logo {
+    width: 25%;
     padding: 1vw;
-    text-align: center;
   }
 }
 .amount {
