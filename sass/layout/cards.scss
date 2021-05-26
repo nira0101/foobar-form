@@ -2,7 +2,7 @@
   display: flex;
   background-color: rgb(249, 252, 251);
   border: 1px solid black;
-  width: 15.5vw;
+  /*  width: 15.5vw; */
   margin: 10px;
   flex-wrap: wrap;
   padding: 15px;
@@ -17,12 +17,7 @@
   align-items: center;
   justify-content: center;
 }
-main {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 5px;
-}
+
 .beer-img {
   width: 50%;
   display: flex;

@@ -1,0 +1,46 @@
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header"
+    " main main checkbox_container"
+    " main main checkbox_container";
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+.checkbox_container {
+  grid-area: checkbox_container;
+}
+
+header {
+  display: grid;
+
+  background-color: cyan;
+}
+
+main {
+  display: grid;
+  width: 600px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-area: 1/1/4/5;
+  background-color: chocolate;
+}
+
+.checkbox_container {
+  background-color: burlywood;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  grid-area: 4/2/5/5;
+}
+
+.checkbox_container {
+  display: flex;
+  justify-content: center;
+}
