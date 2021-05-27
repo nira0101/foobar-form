@@ -59,10 +59,19 @@ button.pay-confirm {
 } */
 
 .submit {
-  height: 50px;
-  width: 96%;
-  margin-right: 6vw;
-  background-color: color.$head-color;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: orange;
   color: white;
-  margin-bottom: 2vw;
+  margin-bottom: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#submit {
+  margin: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
