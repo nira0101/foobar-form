@@ -1,15 +1,6 @@
 @use "../base/fonts";
 @use "../base/color";
 
-<<<<<<< HEAD
-/*header {
-    h1 {
-    font-family: fonts.$monoton;
-    font-size: 80px;
-    font-weight: 200;
-    margin: 0;
-    color: white;
-=======
 header {
   height: auto;
   width: 100%;
@@ -24,11 +15,10 @@ header {
 
   .foo-logo {
     width: 25%;
->>>>>>> f9258ecfd099b659635a63871604ee6bbc5dd784
     padding: 1vw;
     text-align: center;
-  } 
-}*/
+  }
+}
 .amount {
   width: 50%;
 }
