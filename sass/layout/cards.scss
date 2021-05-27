@@ -1,14 +1,18 @@
 .cards {
   display: flex;
   background-color: rgb(249, 252, 251);
-  border: 1px solid black;
-  /*  width: 15.5vw; */
-  margin: 10px;
+
+  /* width: 1.5vw; */
+  margin: 3px;
+
   flex-wrap: wrap;
   padding: 15px;
   gap: 5px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   overflow-wrap: none;
+  margin-right: 10px;
+  border-radius: 5px;
 }
 // check this flex
 .beer-desc input button {
@@ -17,8 +21,15 @@
   align-items: center;
   justify-content: center;
 }
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 5px;
+}
 .beer-img {
-  width: 50%;
+  width: 100px;
+  height: 100px;
   display: flex;
   padding: 10px;
   margin: auto;

@@ -6,36 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-
-
-  
-    
   
   <body>
-    <header>
-       <img src="./public/logo2-01.png" alt="">
-      </header>
-    <div class='grid_container'>
+    <div id="app">
+      <div id="wrapper">
+
       
-       
-
-      <div class="checkbox_container" style="background-color: red;">
-        <h1>your Orders</h1>
-        <button class="pay-confirm">confirm</button>
-         
-<!-- <div></div> -->
-<form>
-        <label>TOTAL:</label>
-        <input type="text" name="total" id="total" />
+      <header>
+        <img src="./public/logo.png" alt="" class="foo-logo">
   
+      </header>
+      
+
+<div class="container"> 
+  
+  <div class="checkbox_container">
+    <div class="box_order"> <h1 class="your_order">Your Order</h1></div>
     
-      </form>
+   <div class="pay"> <button class="pay-confirm">PAY -here</button></div>
+     <div>
+     
+     </div>
+
+<form>
+    <!-- <label>TOTAL:</label>
+    <input type="text" name="total" id="total" /> -->
 
 
- 
-      <main> 
-        </main>
+  </form>
 
+  </div>
+      <main>
+      
+      </main>
+       
+      
       <template>
         <section class="cards">
         <div class="b-img">
@@ -55,10 +60,11 @@
       </section>
     </template>
    
-     
+    
+ 
 
-</div>
-<!-- this a new form section Jesus added to the popup -->
+
+
 <!-- forms added to the modal -->
 <!-- MODAL -->
     <section id="selected-beer" class="hidden">
@@ -73,7 +79,7 @@
           <div class="line"></div>
           <h2>✔</h2>
         </div>
-        <h1>payment</h1>
+        <!-- <h1>payment</h1> -->
         <!-- JESUS 03 -->
         <div class="order_container">
          <div class="card-row">
@@ -115,33 +121,10 @@
             </div>
             <div class="form-group">
               <label for="postal-code">zip/postal code</label>
-              <input id="p_code" type="text" name="postal code"  />
-  
-             
+              <input id="p_code" type="text" name="postal code" />
             </div>
-            
-           <!--  <fieldset id="pay_order">
-              <legend class="payment_info">Payment info</legend>
-              <h2>Payment information</h2>
-              <label> Name
-              <input type="text" name="fname" required placeholder="Your Name">
-            </label>
-            <label >
-              Card number
-              <input name="credit-number" class="cc-number" type="tel" pattern="[0-9]-[0-9][0-9]-[0-9]" maxlength="16" placeholder="Card Number">
-            </label> Expires End
-            <label>
-            <input name="credit-expires" class="cc-expires" type="tel" pattern="\d*" maxlength="7" placeholder="MM / YY">
-            </label>
-            <label>
-              CVC
-            <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="3" placeholder="CVC">
-            </label>
-             <button class="back">cancel</button>
-            <button class="next"> Pay Now</button>       
-            </fieldset> -->
           </form>
-          <button id="submit" class="submit" >Submit and order</button>
+          <button id="submit" class="submit">Submit</button>
         </div>
       
         
@@ -155,18 +138,13 @@
           <div class="line"></div>
           <h2 id="done">✔</h2>
         </div>
-          <h1>confirm</h1>
+         <!--  <h1>confirm</h1> -->
           <div class="order_container">
             <form>
               <fieldset id="pay_thanks">
-                <legend class="thanks">Thanks for your order</legend>
-                <h2>Thanks for your order</h2>
-                <!-- <button class="back_menu">back to menu</button>
-                <button class="next">check Out X </button> -->
-              
-             
-              <!-- <input id="next" type="button" class="next hidden" value="Next"/> -->
-              <!-- <button id="next" class="next"><a></a></button> -->
+               <!--  <legend class="thanks">Thanks for your order</legend> -->
+                <h2 class="thaks" >Thanks for your order!</h2>
+                
             </fieldset>
             </form>
           </div>

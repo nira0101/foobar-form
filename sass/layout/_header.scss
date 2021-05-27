@@ -1,6 +1,7 @@
 @use "../base/fonts";
 @use "../base/color";
 
+<<<<<<< HEAD
 /*header {
     h1 {
     font-family: fonts.$monoton;
@@ -8,6 +9,22 @@
     font-weight: 200;
     margin: 0;
     color: white;
+=======
+header {
+  height: auto;
+  width: 100%;
+  background-color: color.$head-color;
+}
+
+header {
+  display: flex;
+  background-color: var(--primary-color);
+
+  justify-content: center;
+
+  .foo-logo {
+    width: 25%;
+>>>>>>> f9258ecfd099b659635a63871604ee6bbc5dd784
     padding: 1vw;
     text-align: center;
   } 

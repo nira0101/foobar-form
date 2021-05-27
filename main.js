@@ -38,24 +38,27 @@ function get() {
     const div = document.createElement('div')
     div.innerHTML = `
     <section id="addtc"> 
-    <img src="${beer.label}" class="atc-img" >
-    <h3 class = b_name>${beer.name}</h3>
-    <h4>${beer.category}</h4>
-    <button class="c">remove</button>
+    
+    <h3 id='b_name'>${beer.name}</h3>
+    <h4 id='b_name'>${beer.category}</h4>
+    
   
-    <label>Quantity:</label>
-      <div class="amount">
-        <button id="subtract">-</button>
-        <input type="number" name='total' value="0"  id="counter" >
+  
+      <div id="amount">
+        
+        <label>Quantity:</label><button id="subtract">-</button>
+        <input  type="number" name='total' value="1"  id="counter" >
         <button id="add">+</button>
+        <button class="c">Remove</button>
       </div>
       <section>
-
+     
       
 
       
     `
-   
+    //foto beer
+  /*   <img src="${beer.label}" class="atc-img" > */
     //remove the selected item
     const close = div.querySelector(".c");
     close.addEventListener("click", ()=>{
