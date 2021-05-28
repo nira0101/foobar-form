@@ -110,6 +110,7 @@ input[type="number"] {
   flex-direction: row;
   justify-content: center;
   margin-top: 2vw;
+  height: 4vw;
 }
 
 .card-row {
@@ -138,12 +139,16 @@ input[type="number"] {
   gap: 10px;
   margin: 10px;
   border: none;
+  width: 30vw;
+  position: relative;
+  right: -9vw;
   /*  background-color: #c5cec5; */
 }
 .order_container form {
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 1vw;
 
   /* width: 22vw;
   margin-left: 4vw;
@@ -156,11 +161,12 @@ input[type="number"] {
   padding: auto;
   margin-left: 10%;
   margin-right: 20%;
-  /* padding: 0.5vw 0; */
+
   label {
-    font-family: "Courier New", Courier, monospace;
+    font-family: fonts.$raleway;
     color: rgb(241, 239, 239);
     font-size: clamp(18px, 1.2vw, 1.2vw);
+    margin-bottom: 0.5vw;
   }
 
   input,
