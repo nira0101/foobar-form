@@ -1,3 +1,5 @@
+@use "../base/color";
+@use "../base/fonts";
 .cards {
   display: flex;
   background-color: rgb(249, 252, 251);
@@ -35,4 +37,40 @@ main {
   margin: auto;
   border-radius: 50%;
   flex-wrap: wrap;
+}
+
+.name {
+  font-family: fonts.$raleway;
+  font-weight: bolder;
+}
+.cate {
+  font-family: fonts.$raleway;
+  font-weight: bold;
+}
+.alc-lvl {
+  font-family: fonts.$raleway;
+  font-weight: bold;
+  margin-bottom: 1vw;
+}
+
+#addtc {
+  h3 {
+    font-family: fonts.$monteserrat;
+    font-weight: bolder;
+  }
+  h4 {
+    font-family: fonts.$monteserrat;
+    font-weight: bolder;
+  }
+}
+
+#amount {
+  label {
+    font-family: fonts.$raleway;
+    font-weight: bold;
+  }
+}
+.c {
+  font-family: fonts.$raleway;
+  font-weight: bold;
 }

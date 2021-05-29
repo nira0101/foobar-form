@@ -1,0 +1,75 @@
+@use "../base/color";
+@use "../base/fonts";
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+@media only screen and (max-width: $breakpoint-tablet) {
+  #payment {
+    width: 60vw;
+  }
+  .order_container {
+    width: 40vw;
+  }
+  #pay_thanks {
+    position: relative;
+    right: 6vw;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .your_order {
+    font-size: 16px;
+  }
+
+  main {
+    grid-template-columns: repeat(1, 0.8fr);
+
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 4vw;
+  }
+  .checkbox_container {
+    background-color: white;
+  }
+
+  .pay-confirm {
+    font-size: 12px;
+  }
+  #payment {
+    width: 91vw;
+    left: 5%;
+  }
+
+  #progress-bar h2 {
+    height: clamp(25px, 1vw, 1vw);
+    width: clamp(25px, 1vw, 1vw);
+    line-height: clamp(30px, 1vw, 1vw);
+  }
+
+  .order_container {
+    width: 76vw;
+    right: -6vw;
+  }
+
+  .form-group label {
+    font-size: clamp(14px, 1.2vw, 1.2vw);
+  }
+
+  .close {
+    width: clamp(30px, 2vw, 2vw);
+    height: clamp(35px, 2vw, 2vw);
+  }
+
+  #pay_thanks h2 {
+    font-size: 12px;
+    font-family: fonts.$raleway;
+  }
+  .alc-lvl {
+    margin-bottom: 3vw;
+  }
+}
