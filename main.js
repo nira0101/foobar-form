@@ -34,7 +34,7 @@ function get() {
   
   //add to cart
   const amount = copy.querySelector(".atc")
-  amount.addEventListener('click', (p)=>{
+  amount.addEventListener('click', ()=>{
     const div = document.createElement('div')
     div.innerHTML = `
     <section id="addtc"> 
@@ -57,9 +57,7 @@ function get() {
 
       
     `
-    //foto beer
-  /*   <img src="${beer.label}" class="atc-img" > */
-    //remove the selected item
+  
     const close = div.querySelector(".c");
     close.addEventListener("click", ()=>{
 
@@ -73,23 +71,13 @@ function get() {
 
   btnAdd.addEventListener("click", ()=>{
     input.value = parseInt(input.value) + 1;
-/* if(input.value === input.value){
-  document.querySelector("#total").value = input.value; 
-}
-else{
-  document.querySelector("#total").value = input.value ++; 
-} */
+
     
  
   })
   btnSub.addEventListener("click", ()=>{
     input.value = parseInt(input.value) - 1;
-  /*   if(input.value === input.value){
-      document.querySelector("#total").value = input.value; 
-    }
-    else{
-      document.querySelector("#total").value = input.value --; 
-    } */
+ 
 
   })
 
@@ -170,29 +158,11 @@ else{
  }
  
 
- function postData(){
- 
- }
 
 
 
-/*   function findTotal(){
-    let arr = document.getElementsByName('total');
 
-    let total=0;
 
-    for(var i=0;i<arr.length;i++){
-
-        if(parseInt(arr[i].value)){
-          total += parseInt(arr[i].value);
-          
-     document.getElementById('counter').value= total; 
-        }
-
-            
-
-    }
-  } */
   
 
 
